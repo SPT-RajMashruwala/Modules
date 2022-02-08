@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LOGIN" EntityNamespace="LOGINContext" ContextNamespace="LOGINContext" Class="LOGINDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="a61d3bb8-1e22-4cfe-871a-921d1c11dcc7" Provider="Devart.Data.SqlServer.Linq.Provider.SqlDataProvider, Devart.Data.SqlServer.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=DESKTOP-PF2SA84;Initial Catalog=LOGIN;Integrated Security=True;Persist Security Info=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Refreshtokens" Member="Refreshtokens">
+    <Type Name="Refreshtoken" ed:Guid="efb9b27c-89ed-44fe-b981-8dce9ac6aef1">
+      <Column Name="RefreshTokenID" Type="System.Int32" AutoSync="OnInsert" DbType="INT NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="ec896b90-ef4d-4210-893f-c4310a02125e" />
+      <Column Name="RefreshToken" Type="System.String" DbType="VARCHAR(200) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="200" ed:ValidateMaxLength="200" ed:ValidateRequired="true" ed:Guid="be3e1d9d-d758-4c69-8d5b-a1c8b8afc845" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Roles" Member="Roles">
+    <Type Name="Role" ed:Guid="90b59263-5ab9-4a04-bedf-f9d4e21eeffd">
+      <Column Name="RoleID" Type="System.Int32" AutoSync="OnInsert" DbType="INT NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="95fe5e45-a9b9-499b-8edd-1db16c590d47" />
+      <Column Name="RoleName" Type="System.String" DbType="VARCHAR(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="530c0b65-8a3b-4ca0-ab93-2392e22e9eb9" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User" ed:Guid="ee83c33e-d701-47eb-bd82-bf18276a0298">
+      <Column Name="UserID" Type="System.Int32" AutoSync="OnInsert" DbType="INT NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="699eaae3-c502-4b3b-af20-e6f73467b352" />
+      <Column Name="UserName" Type="System.String" DbType="VARCHAR(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="8483954f-2bc0-4056-b9a9-afc81a89c224" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VARCHAR(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="06e1571d-b68c-495d-b9c7-96e34b09e6f6" />
+      <Column Name="Password" Type="System.String" DbType="VARCHAR(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="b5ae9376-094d-4ed7-b0c3-10736128dcc1" />
+      <Column Name="RoleID" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="68dc53bb-2ebf-41f6-a4d8-b1a2a651477d" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UsersRefreshTokens" Member="UsersRefreshTokens">
+    <Type Name="UsersRefreshToken" ed:Guid="5720d393-1507-4aa6-9139-45a4e4d21b3e">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="INT NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="d5feae22-8bcd-47ef-8860-0ade58211316" />
+      <Column Name="UserID" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="098b2736-16e7-4927-b13a-c91635a14980" />
+      <Column Name="RefreshTokenID" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="65a818d0-7935-4499-bb83-a06a734c7faa" />
+    </Type>
+  </Table>
+</Database>
