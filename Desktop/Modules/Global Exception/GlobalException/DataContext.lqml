@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="GlobalExceptionModule" EntityNamespace="GlobalExceptionModuleContext" ContextNamespace="GlobalExceptionModuleContext" Class="GlobalExceptionModuleDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="8786081e-d27a-4af3-aef9-8f58cfaf7120" Provider="Devart.Data.SqlServer.Linq.Provider.SqlDataProvider, Devart.Data.SqlServer.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=DESKTOP-PF2SA84;Initial Catalog=GlobalExceptionModule;Integrated Security=True;Persist Security Info=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User" ed:Guid="bad18bc1-38c2-4a5c-993a-378c82e59deb">
+      <Column Name="UserID" Type="System.Int32" AutoSync="OnInsert" DbType="INT NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="a49d419d-8504-48d8-aff7-50ccd11ad336" />
+      <Column Name="UserName" Type="System.String" DbType="VARCHAR(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="f9939f23-1e57-46a7-865c-307d56f32ca7" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VARCHAR(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="f30adf5e-dfb3-4daa-9f1f-90bbe4e3cb2e" />
+    </Type>
+  </Table>
+</Database>
