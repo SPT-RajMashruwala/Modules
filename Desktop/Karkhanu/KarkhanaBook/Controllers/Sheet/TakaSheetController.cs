@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace KarkhanaBook.Controllers.Sheet
 {
-    [Route("api/[controller]")]
+    [Route("Sheet")]
     [ApiController]
     public class TakaSheetController : ControllerBase
     {
+        [HttpPost]
+        [Route("TakaSheet/Add")]
     }
 }
